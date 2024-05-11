@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.metrics import mean_squared_error, mean_absolute_error
@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 st.markdown("# Modelo preditivo do petróleo brent! ")
 
 with open('modelo_brent.pkl', 'rb') as file_2:
-    modelo_brent = pickle.load(file_2)
+    modelo_brent = joblib.load(file_2)
 
 
 # Carregar o DataFrame
